@@ -50,7 +50,7 @@ export function generateMockTransactions(count = 100) {
   }
 
   return {
-    success: "true",
+    success: true,
     responseData: {
       pageCount: "10",
       stages: transactions,

@@ -25,7 +25,7 @@ export function generateMockJourneys(count = 20) {
   }
 
   return {
-    success: "true",
+    success: true,
     responseData: {
       pageCount: "10",
       journeyList: journeys,
