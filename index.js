@@ -4,6 +4,7 @@ import { generateMockJourneys } from "./jdata.js";
 import { generateMockTransactions } from "./sdata.js";
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.end("haloooo");
@@ -19,8 +20,10 @@ app.post("/stages/search", (req, res, next) => {
 
 app.post("/login", (req, res, next) => {
   // console.log(generateMockJourneys(2));
+  const { employeeId, password } = req.body;
+  console.log(employeeId, password);
   res.send({
-    success: "true",
+    success: true,
     responseData: {
       role: "xx",
       accessToken: "xx", //! accessToken
